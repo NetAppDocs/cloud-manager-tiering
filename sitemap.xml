@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/concept-cloud-tiering.html</loc>
+      
+      <lastmod>2022-03-28T14:26:26+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/faq-cloud-tiering.html</loc>
+      
+      <lastmod>2022-03-14T08:33:51+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/legal-notices.html</loc>
+      
+      <lastmod>2022-03-15T20:20:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/reference-aws-support.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/reference-azure-support.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/reference-google-support.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering//search.html</loc>
+      
+      <lastmod>2022-03-29T20:26:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-get-help.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html</loc>
+      
+      <lastmod>2022-03-24T17:07:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-managing-tiering.html</loc>
+      
+      <lastmod>2022-03-25T19:23:20+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-support-registration.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html</loc>
+      
+      <lastmod>2022-03-24T17:07:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-azure.html</loc>
+      
+      <lastmod>2022-03-22T14:15:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-gcp.html</loc>
+      
+      <lastmod>2022-03-22T14:15:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-overview.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-s3-compat.html</loc>
+      
+      <lastmod>2022-03-24T17:07:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-storagegrid.html</loc>
+      
+      <lastmod>2022-03-22T14:15:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-test.html</loc>
+      
+      <lastmod>2022-03-07T09:16:27+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      <loc>https://docs.netapp.com/us-en/cloud-manager-tiering/whats-new.html</loc>
+      
+      <lastmod>2022-03-28T14:26:26+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
