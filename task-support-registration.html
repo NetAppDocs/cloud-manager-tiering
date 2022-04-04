@@ -651,8 +651,97 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved directive in task-support-registration.adoc - include::https://raw.githubusercontent.com/NetAppDocs/cloud-manager-family/main/_include/support-registration.adoc[]</p>
+<p>Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to Cloud Manager and then register for support.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="add-an-nss-account">Add an NSS account</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Support Dashboard enables you to add and manage all of your NetApp Support Site accounts from a single location.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>If you don&#8217;t have a NetApp Support Site account yet, <a href="https://register.netapp.com/register/start" target="_blank" rel="noopener">register for one</a>.</p>
+</li>
+<li>
+<p>In the upper right of the Cloud Manager console, click the Help icon, and select <strong>Support</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-help-support.png" alt="A screenshot of the Help menu where Support is the first option listed"></span></p>
+</div>
+</li>
+<li>
+<p>Click <strong>NSS Management &gt; Add NSS Account</strong>.</p>
+</li>
+<li>
+<p>When you&#8217;re prompted, click <strong>Continue</strong> to be redirected to a Microsoft login page.</p>
+<div class="paragraph">
+<p>NetApp uses Microsoft Azure Active Directory as the identity provider for authentication services specific to support and licensing.</p>
+</div>
+</li>
+<li>
+<p>At the login page, provide your NetApp Support Site registered email address and password to perform the authentication process.</p>
+<div class="paragraph">
+<p>This action enables Cloud Manager to use your NSS account.</p>
+</div>
+<div class="paragraph">
+<p>Note the following requirements for the account:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The account must be a customer-level account (not a guest or temp account).</p>
+</li>
+<li>
+<p>If you plan to deploy a node-based BYOL system:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The account must be authorized to access the serial numbers of the BYOL systems.</p>
+</li>
+<li>
+<p>If you purchased a secure BYOL subscription, then a secure NSS account is required.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="register-your-account-for-support">Register your account for support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Support registration is available from Cloud Manager in the Support Dashboard.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>In the upper right of the Cloud Manager console, click the Help icon, and select <strong>Support</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="../media/screenshot-help-support.png" alt="A screenshot of the Help menu where Support is the first option listed"></span></p>
+</div>
+</li>
+<li>
+<p>In the <strong>Resources</strong> tab, click <strong>Register for Support</strong>.</p>
+</li>
+<li>
+<p>Select the NSS credentials that you want to register and then click <strong>Register</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 
     </article>
