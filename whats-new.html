@@ -679,7 +679,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-04 15:27:53 +0000">04/04/2022</time>
+    <time datetime="2022-04-11 12:43:16 +0000">04/11/2022</time>
     
   
 
@@ -708,9 +708,15 @@
 <h2 id="4-april-2022">4 April 2022</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="amazon-s3-glacier-instant-retrieval-storage-class-is-now-available">Amazon S3 Glacier Instant Retrieval storage class is now available.</h3>
+<h3 id="amazon-s3-glacier-instant-retrieval-storage-class-is-now-available">Amazon S3 Glacier Instant Retrieval storage class is now available</h3>
 <div class="paragraph">
 <p>When setting up Cloud Tiering, now you can configure a lifecycle rule so your inactive data transitions from the <em>Standard</em> storage class to <em>Glacier Instant Retrieval</em> after a certain number of days. This will help reduce your AWS infrastructure costs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="cloud-tiering-has-been-fully-qualified-on-ontap-select-systems">Cloud Tiering has been fully qualified on ONTAP Select systems</h3>
+<div class="paragraph">
+<p>In addition to tiering data from your AFF and FAS systems, now you can tier inactive data from your ONTAP Select systems to cloud storage.</p>
 </div>
 </div>
 </div>
@@ -719,7 +725,7 @@
 <h2 id="2-september-2021">2 September 2021</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="cloud-tiering-byol-license-replaces-fabricpool-license">Cloud Tiering BYOL license replaces FabricPool license.</h3>
+<h3 id="cloud-tiering-byol-license-replaces-fabricpool-license">Cloud Tiering BYOL license replaces FabricPool license</h3>
 <div class="paragraph">
 <p>A new <strong>Cloud Tiering</strong> license is now available for tiering configurations that are supported within Cloud Manager using the Cloud Tiering service. It is a floating license that you can use across multiple on-premises ONTAP clusters. The <strong>FabricPool</strong> license that you may have used in the past is retained only for configurations that aren’t supported within Cloud Manager.</p>
 </div>
@@ -728,7 +734,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="tier-inactive-data-from-on-prem-ontap-clusters-to-s3-compatible-object-storage">Tier inactive data from on-prem ONTAP clusters to S3-compatible object storage.</h3>
+<h3 id="tier-inactive-data-from-on-prem-ontap-clusters-to-s3-compatible-object-storage">Tier inactive data from on-prem ONTAP clusters to S3-compatible object storage</h3>
 <div class="paragraph">
 <p>Now you can tier inactive data to any Object Storage service which uses the Simple Storage Service (S3) protocol. <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-s3-compat.html">See how to tier data to S3-compatible object storage</a>.</p>
 </div>
@@ -739,7 +745,7 @@
 <h2 id="7-july-2021">7 July 2021</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="the-connector-can-be-running-on-premises-when-tiering-data-to-azure-blob-storage">The Connector can be running on premises when tiering data to Azure Blob storage.</h3>
+<h3 id="the-connector-can-be-running-on-premises-when-tiering-data-to-azure-blob-storage">The Connector can be running on premises when tiering data to Azure Blob storage</h3>
 <div class="paragraph">
 <p>You are no longer required to use a Connector installed in an Azure VNet. Your Connector can be running on a host in your premises when tiering data to Azure Blob storage.</p>
 </div>
@@ -750,7 +756,7 @@
 <h2 id="7-june-2021">7 June 2021</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="new-tiering-classes-now-available-for-certain-cloud-provider-storage">New tiering classes now available for certain cloud provider storage.</h3>
+<h3 id="new-tiering-classes-now-available-for-certain-cloud-provider-storage">New tiering classes now available for certain cloud provider storage</h3>
 <div class="paragraph">
 <p>In earlier releases you could transition tiered data from the Standard storage class to another storage class after 30 days when using Amazon S3 or Google Cloud object storage. This release adds some new functionality:</p>
 </div>
@@ -769,7 +775,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="now-you-can-proactively-move-data-back-to-the-performance-tier-from-the-cloud-tier">Now you can proactively move data back to the performance tier from the cloud tier.</h3>
+<h3 id="now-you-can-proactively-move-data-back-to-the-performance-tier-from-the-cloud-tier">Now you can proactively move data back to the performance tier from the cloud tier</h3>
 <div class="paragraph">
 <p>This functionality is useful if you want to stop using tiering on a volume, or if you decide to keep all user data on the performance tier, but keep Snapshot copies on the cloud tier. This capability is available when using ONTAP 9.8 and greater.</p>
 </div>
@@ -783,13 +789,13 @@
 <h2 id="2-may-2021">2 May 2021</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="now-you-can-select-all-volumes-when-applying-a-tiering-policy">Now you can select all volumes when applying a tiering policy.</h3>
+<h3 id="now-you-can-select-all-volumes-when-applying-a-tiering-policy">Now you can select all volumes when applying a tiering policy</h3>
 <div class="paragraph">
 <p>When selecting the volumes that you want to tier from an ONTAP system, now there&#8217;s a checkbox in the Tier Volumes page to select <strong>all</strong> volumes to make it easier to apply the same policy to all volumes. <a href="task-managing-tiering.html#tiering-data-from-additional-volumes">See how to select all volumes in the cluster</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="number-of-cooling-days-can-now-be-set-up-to-183-days">Number of "cooling" days can now be set up to 183 days.</h3>
+<h3 id="number-of-cooling-days-can-now-be-set-up-to-183-days">Number of "cooling" days can now be set up to 183 days</h3>
 <div class="paragraph">
 <p>If you need to change the number of "cooling days" that determine how long data in a volume must remain inactive before it is moved to object storage, now you can specify up to 183 days (up from 63 days) when using ONTAP 9.8 or greater.</p>
 </div>
@@ -800,7 +806,7 @@
 <h2 id="8-march-2021">8 March 2021</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="lifecycle-rules-now-available-when-tiering-to-google-cloud-storage">Lifecycle rules now available when tiering to Google Cloud Storage.</h3>
+<h3 id="lifecycle-rules-now-available-when-tiering-to-google-cloud-storage">Lifecycle rules now available when tiering to Google Cloud Storage</h3>
 <div class="paragraph">
 <p>When tiering to Google Cloud Storage, you can apply a lifecycle rule so that the tiered data transitions from the Standard storage class to lower-cost Nearline, Coldline, or Archive storage after 30 days.</p>
 </div>

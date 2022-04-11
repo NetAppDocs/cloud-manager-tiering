@@ -679,7 +679,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-05 14:08:42 +0000">04/05/2022</time>
+    <time datetime="2022-04-11 12:43:16 +0000">04/11/2022</time>
     
   
 
@@ -706,7 +706,19 @@
 <p>The Cloud Tiering service leverages the capabilities of <em>FabricPool</em>. FabricPool is a NetApp Data Fabric technology that enables automated tiering of data to low-cost object storage. Active (hot) data remains on the local tier (on-premises ONTAP aggregates), while inactive (cold) data is moved to the cloud tier&#8201;&#8212;&#8201;all while preserving ONTAP data efficiencies.</p>
 </div>
 <div class="paragraph">
-<p><strong>Note:</strong> Starting with ONTAP 9.8 you can tier data from aggregates consisting of HDDs in addition to high-performance SSDs. Prior to that release you can tier data only from AFF systems or FAS systems with all-SSD aggregates. See <a href="https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mgng-stor-tier-fp/GUID-8E421CC9-1DE1-492F-A84C-9EB1B0177807.html" target="_blank" rel="noopener">Requirements for using FabricPool</a> for details.</p>
+<p>Originally supported on AFF and FAS systems with all-SSD aggregates, starting with ONTAP 9.8 you can tier data from aggregates consisting of HDDs in addition to high-performance SSDs. See <a href="https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html" target="_blank" rel="noopener">the considerations and requirements for using FabricPool</a> for details.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-tiering/images/tip.svg" alt="Tip">
+</td>
+<td class="content">
+Cloud Tiering is supported on AFF, FAS, and ONTAP Select systems.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -759,7 +771,7 @@ Cloud Volumes ONTAP systems are read-only from Cloud Tiering. <a href="https://d
 <h2 id="supported-object-storage-providers">Supported object storage providers</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You can tier inactive data from an on-premises ONTAP cluster to the following object storage providers:</p>
+<p>You can tier inactive data from an on-premises ONTAP system to the following object storage providers:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -877,7 +889,7 @@ You can&#8217;t select lifecycle rules for data tiered to StorageGRID or S3-comp
 <p>You won&#8217;t be charged from your pay-as-you-go subscription during your free trial or if you haven&#8217;t exceeded your Cloud Tiering BYOL license.</p>
 </div>
 <div class="paragraph">
-<p><a href="task-licensing-cloud-tiering.html#Use-a-cloud-tiering-paygo-subscription">Learn how to set up a pay-as-you-go subscription</a>.</p>
+<p><a href="task-licensing-cloud-tiering.html#use-a-cloud-tiering-paygo-subscription">Learn how to set up a pay-as-you-go subscription</a>.</p>
 </div>
 </div>
 <div class="sect2">
