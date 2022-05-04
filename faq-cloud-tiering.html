@@ -681,7 +681,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-11 12:43:16 +0000">04/11/2022</time>
+    <time datetime="2022-04-29 20:45:24 +0000">04/29/2022</time>
     
   
 
@@ -740,7 +740,7 @@
 <div class="sect2">
 <h3 id="what-types-of-ontap-systems-are-supported">What types of ONTAP systems are supported?</h3>
 <div class="paragraph">
-<p>Cloud Tiering is supported from AFF, FAS, and ONTAP Select systems.</p>
+<p>Cloud Tiering is supported from single-node and high-availability AFF, FAS, and ONTAP Select clusters. Clusters in FabricPool Mirror configurations are also supported, but the configuration must be done using System Manager or the ONTAP CLI.</p>
 </div>
 </div>
 <div class="sect2">
@@ -790,7 +790,29 @@ Cloud Tiering enables inactive data reporting on HDD aggregates if the cluster i
 <div class="sect2">
 <h3 id="which-object-storage-providers-are-supported">Which object storage providers are supported?</h3>
 <div class="paragraph">
-<p>Amazon S3, Azure Blob storage, Google Cloud Storage, NetApp StorageGRID, and S3-compatible object storage providers are supported.</p>
+<p>Cloud Tiering supports the following object storage providers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon S3</p>
+</li>
+<li>
+<p>Microsoft Azure Blob</p>
+</li>
+<li>
+<p>Google Cloud Storage</p>
+</li>
+<li>
+<p>NetApp StorageGRID</p>
+</li>
+<li>
+<p>S3-compatible object storage</p>
+</li>
+<li>
+<p>IBM Cloud Object Storage (but the FabricPool configuration must be done using System Manager or the ONTAP CLI)</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">

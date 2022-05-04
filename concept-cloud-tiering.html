@@ -681,7 +681,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-11 12:43:16 +0000">04/11/2022</time>
+    <time datetime="2022-04-29 20:45:24 +0000">04/29/2022</time>
     
   
 
@@ -708,19 +708,10 @@
 <p>The Cloud Tiering service leverages the capabilities of <em>FabricPool</em>. FabricPool is a NetApp Data Fabric technology that enables automated tiering of data to low-cost object storage. Active (hot) data remains on the local tier (on-premises ONTAP aggregates), while inactive (cold) data is moved to the cloud tier&#8201;&#8212;&#8201;all while preserving ONTAP data efficiencies.</p>
 </div>
 <div class="paragraph">
-<p>Originally supported on AFF and FAS systems with all-SSD aggregates, starting with ONTAP 9.8 you can tier data from aggregates consisting of HDDs in addition to high-performance SSDs. See <a href="https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html" target="_blank" rel="noopener">the considerations and requirements for using FabricPool</a> for details.</p>
+<p>Originally supported on AFF, FAS, and ONTAP Select systems with all-SSD aggregates, starting with ONTAP 9.8 you can tier data from aggregates consisting of HDDs in addition to high-performance SSDs. See <a href="https://docs.netapp.com/us-en/ontap/fabricpool/requirements-concept.html" target="_blank" rel="noopener">the considerations and requirements for using FabricPool</a> for details.</p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-manager-tiering/images/tip.svg" alt="Tip">
-</td>
-<td class="content">
-Cloud Tiering is supported on AFF, FAS, and ONTAP Select systems.
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Cloud Tiering licenses can also be shared with your clusters that are in FabricPool Mirror configurations (not including MetroCluster configurations). The FabricPool configuration must be done using System Manager or the ONTAP CLI, but <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations">licensing for these types of clusters is done using Cloud Tiering.</a></p>
 </div>
 </div>
 </div>
@@ -793,6 +784,9 @@ Cloud Volumes ONTAP systems are read-only from Cloud Tiering. <a href="https://d
 <p>NetApp StorageGRID</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Cloud Tiering licenses can also be shared with your clusters that are tiering data to IBM Cloud Object Storage. FabricPool configuration must be done using System Manager or the ONTAP CLI, but <a href="https://docs.netapp.com/us-en/cloud-manager-tiering/task-licensing-cloud-tiering.html#apply-cloud-tiering-licenses-to-clusters-in-special-configurations">licensing for this type of configuration is done using Cloud Tiering.</a></p>
 </div>
 <div class="admonitionblock note">
 <table>

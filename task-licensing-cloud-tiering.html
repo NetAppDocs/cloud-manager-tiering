@@ -681,7 +681,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-04-04 15:24:58 +0000">04/04/2022</time>
+    <time datetime="2022-04-29 13:28:46 +0000">04/29/2022</time>
     
   
 
@@ -851,10 +851,10 @@ Your browser does not support the video tag.
 <div class="sect2">
 <h3 id="new-cloud-tiering-byol-licensing-starting-august-21-2021">New Cloud Tiering BYOL licensing starting August 21, 2021</h3>
 <div class="paragraph">
-<p>The new <strong>Cloud Tiering</strong> license was introduced in August 2021 for tiering configurations that are supported within Cloud Manager using the Cloud Tiering service. Cloud Manager currently supports tiering to the following cloud storage: Amazon S3, Azure Blob storage, Google Cloud Storage, S3-compatible object storage, and StorageGRID.</p>
+<p>The new <strong>Cloud Tiering</strong> license was introduced in August 2021 for tiering configurations that are supported within Cloud Manager using the Cloud Tiering service. Cloud Manager currently supports tiering to the following cloud storage: Amazon S3, Azure Blob storage, Google Cloud Storage, S3-compatible object storage, IBM Cloud Object Storage, and StorageGRID.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>FabricPool</strong> license that you may have used in the past to tier on-premises ONTAP data to the cloud is being retained only for ONTAP deployments in sites that have no internet access (also known as "dark sites"). If you have a dark site deployment, you&#8217;ll install a FabricPool license on each cluster using System Manager or the ONTAP CLI.</p>
+<p>The <strong>FabricPool</strong> license that you may have used in the past to tier on-premises ONTAP data to the cloud is being retained only for ONTAP deployments in sites that have no internet access (also known as "dark sites") or for MetroCluster systems using FabricPool Mirror. If you are using these configurations, you&#8217;ll install a FabricPool license on each cluster using System Manager or the ONTAP CLI.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -1037,6 +1037,105 @@ Note that tiering to StorageGRID does not require a FabricPool or Cloud Tiering 
 <div class="paragraph">
 <div class="title">Result</div>
 <p>Cloud Manager updates the license so that your Cloud Tiering service continues to be active.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="apply-cloud-tiering-licenses-to-clusters-in-special-configurations">Apply Cloud Tiering licenses to clusters in special configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>ONTAP clusters in the following configurations can use Cloud Tiering licenses, but they must be applied in a different manner than typical single-node and HA-configured ONTAP clusters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Clusters in Tiering Mirror configurations (clusters connected to two object stores)</p>
+<div class="paragraph">
+<p>FabricPool Mirror using MetroCluster configurations is not currently supported</p>
+</div>
+</li>
+<li>
+<p>Clusters that are tiered to IBM Cloud Object Storage</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="process-for-existing-clusters-that-have-a-fabricpool-license">Process for existing clusters that have a FabricPool license</h3>
+<div class="paragraph">
+<p>When you <a href="task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering">discover any of these special cluster types in Cloud Tiering</a>, Cloud Tiering recognizes the FabricPool license and adds the license into the Digital Wallet. Those clusters will continue tiering data as usual. When the FabricPool license expires, you&#8217;ll need to purchase a Cloud Tiering license.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="process-for-newly-created-clusters">Process for newly created clusters</h3>
+<div class="paragraph">
+<p>When you discover typical clusters in Cloud Tiering, you&#8217;ll configure tiering using the Cloud Tiering interface. In these cases the following actions happen:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The "parent" Cloud Tiering license tracks the capacity being used for tiering by all clusters to make sure there is enough capacity in the license</p>
+</li>
+<li>
+<p>A "child" tiering license is automatically installed on each cluster to communicate with the "parent" license in the Digital Wallet</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>For the two configurations listed above, you&#8217;ll need to configure tiering using System Manager or the ONTAP CLI (not by using the Cloud Tiering interface). So in these cases you&#8217;ll need to push the "child" license to these clusters manually from the Cloud Tiering interface.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-manager-tiering/images/tip.svg" alt="Tip">
+</td>
+<td class="content">
+Since data is tiered to two different object storage locations for Tiering Mirror configurations, you&#8217;ll need to purchase a license with enough capacity for tiering to both locations.
+</td>
+</tr>
+</table>
+</div>
+<div class="olist arabic">
+<div class="title">Steps</div>
+<ol class="arabic">
+<li>
+<p>Install and configure your ONTAP clusters using System Manager or the ONTAP CLI.</p>
+<div class="paragraph">
+<p>Do not configure tiering at this point.</p>
+</div>
+</li>
+<li>
+<p><a href="task-licensing-cloud-tiering.html#use-a-cloud-tiering-byol-license">Purchase a Cloud Tiering license</a> for the capacity needed for the new cluster, or clusters.</p>
+</li>
+<li>
+<p>In Cloud Manager, <a href="task-licensing-cloud-tiering.html#add-cloud-tiering-byol-licenses-to-your-account">add the license to the Digital Wallet</a>.</p>
+</li>
+<li>
+<p>In Cloud Tiering, <a href="task-managing-tiering.html#discovering-additional-clusters-from-cloud-tiering">discover the new clusters</a>.</p>
+</li>
+<li>
+<p>From the Cluster Dashboard, click <span class="image"><img src="./media/screenshot_horizontal_more_button.gif" alt="More icon"></span> for the cluster and select <strong>Deploy License</strong>.</p>
+<div class="paragraph">
+<p><span class="image"><img src="./media/screenshot_tiering_deploy_license.png" alt="A screenshot showing how to deploy a tiering license to an ONTAP cluster."></span></p>
+</div>
+</li>
+<li>
+<p>In the <em>Deploy License</em> dialog, click <strong>Deploy</strong>.</p>
+<div class="paragraph">
+<p>The child license is deployed to the ONTAP cluster.</p>
+</div>
+</li>
+<li>
+<p>Return to System Manager or the ONTAP CLI and set up your tiering configuration.</p>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/manage-mirrors-task.html" target="_blank" rel="noopener">FabricPool Mirror configuration information</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/ontap/fabricpool/setup-ibm-object-storage-cloud-tier-task.html" target="_blank" rel="noopener">Tiering to IBM Cloud Object Storage information</a></p>
+</div>
+</li>
+</ol>
 </div>
 </div>
 </div>
