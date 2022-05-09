@@ -681,7 +681,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-04 19:24:44 +0000">05/04/2022</time>
+    <time datetime="2022-05-09 14:47:10 +0000">05/09/2022</time>
     
   
 
@@ -783,6 +783,12 @@
 <h3 id="how-does-cloud-tiering-determine-which-blocks-to-tier-to-the-cloud">How does Cloud Tiering determine which blocks to tier to the cloud?</h3>
 <div class="paragraph">
 <p>The tiering policy associated with the volume is the mechanism that controls which blocks are tiered and when. The policy defines the type of data blocks (snapshots, user data, or both) and the cooling period. See <a href="concept-cloud-tiering.html#volume-tiering-policies">Volume Tiering Policies</a> for details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-does-cloud-tiering-affect-the-volume-capacity">How does Cloud Tiering affect the volume capacity?</h3>
+<div class="paragraph">
+<p>Cloud Tiering has no effect on the volume’s capacity but rather on the aggregate’s performance tier usage.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1021,6 +1027,12 @@
 </div>
 </div>
 <div class="sect2">
+<h3 id="does-cloud-tiering-support-the-use-of-life-cycle-management-policies">Does Cloud Tiering support the use of life cycle management policies?</h3>
+<div class="paragraph">
+<p>Yes. You can enable life cycle management so that Cloud Tiering transitions data from the default storage class/access tier to a more cost-effective tier after a certain number of days. The life cycle rule is applied to all objects in the selected bucket for Amazon S3 and Google Cloud storage, and to all containers in the selected storage account for Azure Blob.</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="does-cloud-tiering-use-one-object-store-for-the-entire-cluster-or-one-per-aggregate">Does Cloud Tiering use one object store for the entire cluster or one per aggregate?</h3>
 <div class="paragraph">
 <p>One object store for the entire cluster.</p>
@@ -1054,9 +1066,9 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="how-can-i-bring-my-tiered-data-back-on-prem">How can I bring my tiered data back on-prem?</h3>
+<h3 id="how-can-i-bring-my-tiered-data-back-on-prem-to-the-performance-tier">How can I bring my tiered data back on-prem to the performance tier?</h3>
 <div class="paragraph">
-<p>Write back is generally performed on reads and depends on the tiering policy type. Prior to ONTAP 9.8, writing back of the entire volume can be done with a volume move operation. After 9.8, the Tiering UI has options to <strong>Bring back all data</strong> or <strong>Bring back active file system</strong>. <a href="task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier">See how to move data back to the performance tier</a>.</p>
+<p>Write back is generally performed on reads and depends on the tiering policy type. Prior to ONTAP 9.8, writing back of the entire volume can be done with a <em>volume move</em> operation. Starting with ONTAP 9.8, the Tiering UI has options to <strong>Bring back all data</strong> or <strong>Bring back active file system</strong>. <a href="task-managing-tiering.html#migrating-data-from-the-cloud-tier-back-to-the-performance-tier">See how to move data back to the performance tier</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1075,15 +1087,6 @@
 <h3 id="can-i-use-the-cloud-providers-console-or-object-storage-explorers-to-look-at-the-data-tiered-to-a-bucket-can-i-use-the-data-stored-in-the-object-storage-directly-without-ontap">Can I use the cloud provider’s console or object storage explorers to look at the data tiered to a bucket? Can I use the data stored in the object storage directly without ONTAP?</h3>
 <div class="paragraph">
 <p>No. The objects constructed and tiered to the cloud do not contain a single file but up to 1,024 4KB blocks from multiple files. A volume’s metadata always remains on the local tier.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="can-i-apply-policies-to-my-object-store-to-move-data-around-independent-of-tiering">Can I apply policies to my object store to move data around independent of tiering?</h3>
-<div class="paragraph">
-<p>Yes. You can enable life cycle management so that Cloud Tiering transitions data from the default storage class/access tier to a more cost-effective tier after a certain number of days.</p>
-</div>
-<div class="paragraph">
-<p>The life cycle rule is applied to all objects in the selected bucket for Amazon S3 and Google Cloud storage, and to all containers in the selected storage account for Azure Blob.</p>
 </div>
 </div>
 </div>
